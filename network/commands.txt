@@ -1,0 +1,132 @@
+===================================================================================
+Show Commands
+==============================================================================
+show config (see saved config file)
+show running-config
+
+vlans:
+==================================================================
+show interface brief (check all the interface vlans and port-aggrigator)
+show vlan (check vlan and port maping)
+show vlan id 1 (check vlan port and mode)
+show vlan interface g0/1 (show detals of vlan and specific port)
+show ip interface brief (check vlan and ip mapping)
+
+RSTP
+=================================================================
+show spanning-tree
+
+LACP
+=================================================================
+show interface port-aggregator <group no> (check if speed is increased)
+show aggregator-group <group no> brief 
+show running-config interface g0/1 (to check the mode of aggregation.. active or passive)
+
+DHCP
+=================================================================
+show ip dhcpd pool (to see the ip pool the server can offer)
+show ip route all
+show ip dhcpd binding (to check the device and their mac who are connected to the server)
+
+
+===================================================================
+configaretions
+====================================================================
+Enable ssh:
+mode: config
+command: ip sshd enable
+
+show mac address-table
+mode: enable.
+command: show mac address-table
+
+Encirpt pass:
+mode: config
+command:serveice password encription
+
+
+Create Vlan:
+mode: config
+command: vlan 1001-1004
+
+change port mode:
+mode: config
+command: interface g0/1->switchport mode (trunk|access) -> switchport pvid (id) set native port.
+command: interface g0/1->switchport trunk allowed vlan remove <vlan_id>
+
+
+RSTP:
+mode config
+command: spanning-tree rstp priority <value> (set priority of switch)
+command: interface g0/1 -> spanning-tree rstp cost <value> (set cost of port)
+command: debug spanning-tree packet. (to check BPDU packet)
+command: no debug all (stop debuging)
+
+LACP:
+mode: config
+command: interface port-aggregatior <group no> (create a port aggrigator)
+command: interface range g0/1,2 (select multiple ports) -> aggrigator-group <group no> mode lacp <active|passive>
+
+DHCP Server:
+mode:config
+command: int vlan <no> -> ip address <addr> <subnet> (give ip to vlan)
+command: ip dhcpd pool <poolName> (create a pool) -> 
+	 netowrk <network address> <subnet> ->
+	 default-router <vlan ip address> ->
+	 range <start ip> <end ip>->
+	 ip dhcpd enable 
+
+
+OSPF:
+
+setup ip in vlans. 
+mode:config
+command: interface vlan 1002 -> ip ospf network point-to-point->exit
+	router ospf <process_ID> (can be any id.. for clearification we use vlan id)
+	network <network address of the connecting network> <subnet> area 0
+	------------------------------------
+	--------------------------------- add all the networks
+	router-id <any id can be given> (in generel the gateway is set as router id)
+	
+	
+add additional confg:
+mode:config
+command: interface vlan 1002 -> ip ospf hello-interface 20 -> ip ospf dead-interval 80 -> ip mtu 1500 -> ip ospf authentication message-digest -> ip ospf message-digest-key 1 md5 <key value>
+	
+
+
+ACL:
+Standard mode:
+add ip for telnet:
+mode:config
+command: ip access-list standard test1
+	 permit 172.16.0.1 255.255.255.255
+	 exit
+	 ip telnet access-class test2
+
+add ip for ssh:
+mode:config
+command: ip access-list standard test2
+	 permit 172.16.0.2 255.255.255.255
+	 exit
+	 ip sshd access-class test2
+add ip for http
+mode:config
+command: ip access-list standard test3
+	 permit 172.16.0.3 255.255.255.255
+	 exit
+	 ip http access-list test3
+
+
+Extended mode:
+mode:config
+command: ip access-list extended mylist->
+	permit tcp 172.16.0.2 255.255.255.255 172.16.0.10 255.255.255.255 eq telnet
+	permit tcp 172.16.0.2 255.255.255.255 172.16.0.10 255.255.255.255 eq 22
+	permit tcp 172.16.0.3 255.255.255.255 172.16.0.10 255.255.255.255 eq www
+	deny ip any 172.16.0.10 255.255.255.255
+	exit
+	ip access-group mylist
+
+
+
