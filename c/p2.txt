@@ -1,0 +1,17 @@
+G:
+1. what is a constant?
+2. Which type of constant do u know? 
+	number. different base
+	char, storage, representation spcial char
+	enumeration
+	string, storage, reperesentation
+3. keyword cost. global and local variable.
+
+p:
+
+1. How to represent char? how to store char? write a program to descirbe the relationship between ascii and char?
+2. What are the special char? what do they do ? how do i print spcial char?
+3. How to define and represnt different base in c? write code to illustrate?
+4. Howto define and use enum? write code to descirbe?
+5.why do we say string is constatnt? illustration
+6. can we change the value of a constant variable? how?
