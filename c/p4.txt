@@ -1,0 +1,13 @@
+Operations and expressions
+
+Pointers on c -> chapter 5
+
+Practice:
+
+1. What are the rules of expression operation?
+2. fnd leap year in using one statement
+3. which operators have side effects and what are they
+4. pointers on c 5.8 q 7
+5. 5.8 q 12
+6. 5.9 q 3
+7. find outputs.

@@ -1,0 +1,13 @@
+Variable
+
+1. compositon of variable
+2. data type
+3. local and global variable
+
+1. what are the rules for costitute the variables
+2. what are the types of variables? waht is the difference between them?
+3. How to define and use variables? assign and use
+4. What is the nature of a variable name? Illustraton
+5. Where do computer stre local and global variable in memory?
+6. Why do we nddo dtatic to declare a variable?
+7. What is different between local and global variable when it declare by static? and where the coputer store them in memory? 

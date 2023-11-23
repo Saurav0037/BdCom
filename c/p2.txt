@@ -1,3 +1,5 @@
+Constant.
+
 G:
 1. what is a constant?
 2. Which type of constant do u know? 
