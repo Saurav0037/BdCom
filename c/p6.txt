@@ -1,0 +1,22 @@
+Selection Statements:
+
+Guidelines:
+
+pointers on c.pdf 4.1-4.4, 4.8
+The C programing Language 2nd.pdf 3.1-3.4
+
+1. What is he relationship between expression and statement?
+2. bool type
+3. why do we need to indent if the compiler allow us write code like this?
+
+practice:
+
+1. What is the function of control expressions? what kind of form it can be ?
+2. How many control statements can c code have? how many categories can we divide them into ?
+3. how many kind of selections statements are there ? what are their application scenarios?
+4. How many forms of if statemetns?
+5. What should we pay attention to int the switch statemetns.
+6. what is dangling else? explain
+7. What is switch fall-through ? advantage and disadvantabe?
+8. pointers on c.pdf 4.13 question 4
+9. pointers on c.pdf 4.13 question 16

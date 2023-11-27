@@ -1,0 +1,21 @@
+Loop & Goto Statement
+
+Guide:
+
+Pointers on C.pdf chapter 4.5-4.7, 4.9
+The C programing language 2nd.pdf 3.5-3.8
+
+1. What is the execute order of the 3 parts of the for control expression?
+2. How to convert between while and for?
+
+Practice:
+
+1. How many kinds of loop statements are there? What are their application senario?
+2. //// no need.
+3. Difference of break continue and return when used in nested loop
+4. Difference of break and return in case statements
+5. pointers on c.pdf 5.8 q 8
+6. Advantages and disadvantages of goto statements
+
+
+

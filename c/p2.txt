@@ -11,7 +11,7 @@ G:
 
 p:
 
-1. How to represent char? how to store char? write a program to descirbe the relationship between ascii and char?
+1. How to represent char? how to store char? write a program to descirbe the relationship between     ascii and char?
 2. What are the special char? what do they do ? how do i print spcial char?
 3. How to define and represnt different base in c? write code to illustrate?
 4. Howto define and use enum? write code to descirbe?
