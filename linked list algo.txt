@@ -1,0 +1,78 @@
+singly:
+insert:
+=======================================================
+head:
+1. new node point to the head
+2. head = new node.
+end:
+1. new node point to null
+2. last node point to new node
+middle:
+1. goto the poistion.
+2. new node point to postiton+1 node.
+3. position node will point to new node.
+
+Delete:
+=======================================================
+head:
+1. head = head->next;
+last:
+2. pervious of last point to null
+middle:
+1. positon node will point to positon->next->next;
+
+Doubly:
+insert:
+=======================================================
+head:
+1. new next -> head;
+2. head previous -> new
+3. new previous -> null
+4. head = new;
+end:
+1. new node next -> null
+2. new node previous -> last 
+3. last next ->new node.
+middle:
+1. new node point to poistion and positon+1;
+2. positon and postiton+1 point to new node.
+
+delete:
+=======================================================
+head:
+1. head = head next;
+2. head previous = null
+last:
+1. last previous = null
+2. last-1 next = null
+middle:
+1. privious node next -> next node
+2. next node previous -> previous node. 
+
+circular:
+insert:
+=======================================================
+head:
+1. new node point to head;
+2. last node pint ot new node
+3. head = new node.
+end:
+1. new node next = head;
+2. last node next = new node
+middle: (same as singly)
+1. goto the poistion.
+2. new node point to postiton+1 node.
+3. position node will point to new node.
+
+delete:
+=======================================================
+head:
+1. head = head next
+2. last node next = head;
+end:
+1. last -1 node will point to head.
+middle:
+1. positon node will point to positon->next->next;
+
+
+ 
